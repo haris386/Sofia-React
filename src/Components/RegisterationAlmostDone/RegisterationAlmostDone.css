@@ -1,0 +1,87 @@
+.leftsideimg {
+  width: 90%;
+}
+
+.left-side-column{
+    border-right: 1px solid gray;
+  }
+  
+  
+  .rightimg {
+    width: 45%;
+  }
+  
+  .rightsideimg2 {
+    width: 80%;
+  }
+
+  .below-img-row{
+    margin-top: 10%;
+  }
+  
+  h5 {
+    text-align: left;
+    font-weight: bold;
+  }
+  
+  .hello-heading {
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  p {
+    text-align: left;
+  }
+  
+  .right-side-para {
+    text-align: center;
+  }
+  
+  .email-heading {
+    text-align: left;
+  }
+
+.continue-btn {
+  width: 80%;
+  margin-left: 6%;
+  background: #2374ab;
+  border: none;
+}
+
+.continue-btn:hover {
+  background: #174e72;
+}
+  
+  /* Media query for screens with a maximum width of 991px (tablet and smaller) */
+  @media (max-width: 991px) {
+      .leftimg {
+      width: 100%; /* Set image width to 100% on tablet and smaller screens */
+    }
+}
+  
+  /* Media query for screens with a maximum width of 767px (mobile) */
+  @media (max-width: 767px) {
+    .leftimg {
+        width: 100%; /* Set image width to 100% on mobile screens */
+    }
+  
+    /* Center-align headings and paragraphs */
+    h5,
+    p,
+    .hello-heading,
+    .right-side-para {
+      text-align: center;
+    }
+  
+    /* Add margin to login and sign-in buttons from the right */
+    .login-btn,
+    .google-btn,
+    .twitter-btn {
+      margin-right: 5%; /* Adjust this value as needed */
+    }
+  
+    .left-side-column{
+      border: none;
+    }
+  }
+  
