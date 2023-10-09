@@ -5,6 +5,7 @@ import { Login } from "./Components/Login/Login";
 import { Register } from "./Components/Register/Register";
 import { RegisterationAlmostDone } from "./Components/RegisterationAlmostDone/RegisterationAlmostDone";
 import { Paymentcards } from './Components/PaymentCards/Paymentcards'
+import { Programinventory } from "./Components/ProgramInventory/Programinventory";
 
 function App() {
   return (
@@ -25,6 +26,9 @@ function App() {
 
           {/* Route for Payment Cards Screen */}
           <Route path="/paymentcards" element={<Paymentcards />} />
+         
+          {/* Route for Program Inventory Screen */}
+          <Route path="/programinventory" element={<Programinventory />} />
         </Routes>
       </Router>
     </>
