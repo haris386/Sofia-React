@@ -1,0 +1,190 @@
+.PI-left-side-column {
+    background-color: #355070;
+  }
+  
+  .circle1 {
+    width: 8%;
+    background: #72849b;
+    text-align: center;
+    border-radius: 100px;
+    padding: 1%;
+    color: #39424d;
+    font-weight: bold;
+  }
+  
+  .circle1-line {
+    border: 1px solid #72849b;
+    display: block;
+    background-color: #72849b;
+    width: 65px;
+  }
+  
+  .PI-heading {
+    text-align: center;
+  }
+  
+  .download-template {
+    background: #355070;
+    color: white;
+    border-radius: 4px;
+  }
+  
+  .fill-up-template {
+    border: 2px solid #355070;
+    color: #355070;
+    border-radius: 4px;
+    width: 100%;
+  }
+  
+  .skip-link {
+    text-align: center;
+    font-weight: 500;
+    color: #355070;
+  }
+  
+  .rightsideimg {
+    width: 80%;
+  }
+  
+  /* CARD CODE */
+  .left-side-column {
+    border-right: 2px solid #bfbfbf;
+  }
+  
+  .left-side-column-text {
+    text-align: left;
+  }
+  
+  .card {
+    margin-left: 3%;
+    width: 93%;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border: none;
+    margin-top: 5%;
+    margin-bottom: 10%;
+  }
+  
+  .bd-grid {
+    display: grid;
+    gap: 1.5rem;
+  }
+  
+  .linetitle {
+    font-size: 20px;
+  }
+  
+  .linecontent {
+    display: flex;
+  }
+  
+  .linetime {
+    padding-right: 1rem;
+  }
+  
+  .r1 {
+    background-color: #2a9d8f !important;
+    border: none;
+  }
+  
+  .t1 {
+    color: #2a9d8f !important;
+  }
+  
+  .Hrounder {
+    position: relative;
+    display: block;
+    width: 16px;
+    height: 16px;
+    /* background-color: #2a9d8f; */
+    border: 2px solid #2a9d8f !important;
+    border-radius: 50%;
+    margin-top: 0.25rem;
+  }
+  
+  .Hline {
+    display: block;
+    width: 2px;
+    height: 126%;
+    background-color: #2a9d8f;
+    transform: translate(7px, 0);
+  }
+  
+  .linedata {
+    margin-left: 10%;
+  }
+  
+  .tree-row {
+    padding: 10%;
+  }
+  
+  .tree-x-axis {
+    width: 10%;
+    height: 40px;
+    background: #858585;
+    border-radius: 100%;
+    padding: 7px;
+    font-weight: bold;
+  }
+  
+  .c1 {
+    background: #72849b;
+  }
+  
+  .c2 {
+    background: #ffffff;
+    color: black;
+  }
+  
+  .c3 {
+    background: #72849b;
+  }
+  
+  .tree-x-axis-line {
+    width: 15%;
+    height: 2px;
+    background-color: #72849b;
+    margin-top: 4%;
+    margin-left: 0px;
+  }
+  
+  .x-row {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .x-row-2 {
+    border-bottom: 2px solid #c2d4d2;
+  }
+  
+  .arrow-image {
+    width: 30%;
+    height: 100px;
+  }
+  
+  .skills-p-tag {
+    text-align: left;
+  }
+  
+  .next-btn {
+    width: 80%;
+    border-color: #355070;
+    background-color: #355070;
+  }
+  
+  .add-skills-btn {
+    border-color: #355070;
+    color: #355070 !important;
+  }
+  
+  .l2,
+  .l3,
+  .l4,
+  .l5,
+  .l6 {
+    background-color: #d4ebe9;
+  }
+  
+  .cl123 {
+    margin-top: 10%;
+  }
+  

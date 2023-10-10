@@ -1,11 +1,13 @@
 import "./App.css";
 import React from "react";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
-import { Login } from "./Components/Login/Login";
-import { Register } from "./Components/Register/Register";
-import { RegisterationAlmostDone } from "./Components/RegisterationAlmostDone/RegisterationAlmostDone";
-import { Paymentcards } from './Components/PaymentCards/Paymentcards'
-import { Programinventory } from "./Components/ProgramInventory/Programinventory";
+import { Login } from "./Components/Onboarding Components/Login/Login";
+import { Register } from "./Components/Onboarding Components/Register/Register";
+import { RegisterationAlmostDone } from "./Components/Onboarding Components/RegisterationAlmostDone/RegisterationAlmostDone";
+import { Paymentcards } from './Components/Onboarding Components/PaymentCards/Paymentcards'
+import { Programinventory } from "./Components/Program Inventory Components/ProgramInventory/Programinventory";
+import { Templateback } from "./Components/Program Inventory Components/TemplateBack/Templateback";
+import { Uploadsuccessful } from "./Components/Program Inventory Components/UploadSuccessful/Uploadsuccessful";
 
 function App() {
   return (
@@ -29,6 +31,12 @@ function App() {
          
           {/* Route for Program Inventory Screen */}
           <Route path="/programinventory" element={<Programinventory />} />
+          
+          {/* Route for Template Back Screen */}
+          <Route path="/templateback" element={<Templateback />} />
+          
+          {/* Route for Upload Successful Screen */}
+          <Route path="/uploadsuccessful" element={<Uploadsuccessful />} />
         </Routes>
       </Router>
     </>
