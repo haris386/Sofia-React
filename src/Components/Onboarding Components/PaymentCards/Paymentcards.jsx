@@ -57,7 +57,7 @@ export const Paymentcards = () => {
                   payment gateway
                 </p>
                 <h6 className="email-heading">Card Holder Name*</h6>
-                <input type="name" name="" id="" className="email-inputfield" />
+                <input type="name" name="" id="" className="payment-email-inputfield" />
                 <h6 className="email-heading" style={{ marginTop: "5%" }}>
                   Debit/Credit Card Number*
                 </h6>
@@ -65,9 +65,9 @@ export const Paymentcards = () => {
                   type="numeric"
                   name=""
                   id=""
-                  className="email-inputfield"
+                  className="payment-email-inputfield"
                 />
-                <Row style={{marginLeft: '15%'}}>
+                <Row className="ValidCVV">
                   <Col md={6}>
                     <Row>
                       <h6 className="email-heading" style={{ marginTop: "5%" }}>
@@ -80,7 +80,7 @@ export const Paymentcards = () => {
                           type="number"
                           name=""
                           id=""
-                          className="email-inputfield"
+                          className="validtill-inputfield1"
                         />
                       </Col>
                       <Col md={6}>
@@ -88,7 +88,7 @@ export const Paymentcards = () => {
                           type="number"
                           name=""
                           id=""
-                          className="email-inputfield"
+                          className="validtill-inputfield2"
                         />
                       </Col>
                     </Row>
@@ -106,7 +106,7 @@ export const Paymentcards = () => {
                           type="numeric"
                           name=""
                           id=""
-                          className="email-inputfield"
+                          className="payment-email-inputfield"
                         />
                       </Col>
                       <Col md={6}></Col>
@@ -129,9 +129,9 @@ export const Paymentcards = () => {
                 <Row>
                   <Col md={3}></Col>
                   <Col md={6}>
-                    <Button className="Next-btn">Next</Button>
+                    <Button className="payment-Next-btn">Next</Button>
                     &nbsp;
-                    <Button className="Go-Back-btn">Go Back</Button>
+                    <Button className="payment-Go-Back-btn">Go Back</Button>
                     &nbsp;
                   </Col>
                   <Col md={3}></Col>

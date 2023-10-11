@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import "./Register.css";
 import leftsideimg from "./img/leftsideimg.png";
@@ -18,6 +18,26 @@ import { RiTwitterXLine } from "react-icons/ri";
 import { Link } from "react-router-dom";
 
 export const Register = () => {
+  const [email, setEmail] = useState("");
+  const [error, setError] = useState("");
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
+
+  const handleRegistration = () => {
+    if (!email) {
+      setError("Please fill in both email and password fields.");
+    } else if (!/\S+@\S+\.\S+/.test(email)) {
+      setError("Please enter a valid email address.");
+    } else {
+      // Your registration logic goes here
+      // You can save the email and password to local storage for authentication
+      localStorage.setItem("email", email);
+      // Redirect to another page or perform any necessary actions
+    }
+  };
+
   return (
     <>
       <Container fluid>
@@ -72,12 +92,14 @@ export const Register = () => {
               <Col md={3}></Col>
               <Col md={6}>
                 <Row>
-                  <h6 className="email-heading">Email ID</h6>
+                  <h6 className="register-email-heading">Email ID</h6>
                   <input
                     type="email"
                     name=""
                     id=""
-                    className="email-inputfield"
+                    className="register-email-inputfield"
+                    onChange={handleEmailChange}
+                    value={email}
                   />
                 </Row>
               </Col>
@@ -87,7 +109,8 @@ export const Register = () => {
             <Row>
               <Col md={3}></Col>
               <Col md={6}>
-                <Button className="login-btn">Continue with Email</Button>
+                {error && <p className="error-message">{error}</p>}
+                <Button className="login-btn" onClick={handleRegistration}>Continue with Email</Button>
               </Col>
               <Col md={3}></Col>
               <span>OR</span>
@@ -97,11 +120,6 @@ export const Register = () => {
                   <Button className="google-btn">
                     <FcGoogle />
                     Continue with Google
-                  </Button>
-                  &nbsp;
-                  <Button className="twitter-btn">
-                    <RiTwitterXLine />
-                    Continue with Twitter
                   </Button>
                   &nbsp;
                 </Col>

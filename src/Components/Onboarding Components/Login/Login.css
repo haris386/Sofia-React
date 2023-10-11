@@ -33,11 +33,11 @@ p {
   text-align: center;
 }
 
-.email-heading {
+.login-email-heading {
   text-align: left;
 }
 
-.email-inputfield {
+.login-email-inputfield {
   margin-left: 4%;
   border-radius: 5px;
   border: 1px solid gray;
@@ -47,7 +47,7 @@ p {
 .password-heading {
   text-align: left;
 }
-.password-inputfield {
+.login-password-inputfield {
   margin-left: 4%;
   border-radius: 5px;
   border: 1px solid gray;
@@ -140,5 +140,9 @@ Link {
 
   .left-side-column{
     border: none;
+  }
+
+  .login-email-heading{
+    margin-left: 0% !important;
   }
 }

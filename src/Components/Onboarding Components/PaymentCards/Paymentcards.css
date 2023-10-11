@@ -54,7 +54,15 @@ p {
   margin-left: 7%;
 }
 
-.email-inputfield {
+.payment-email-inputfield {
+  /* margin-left: 4%; */
+  border-radius: 5px;
+  border: 1px solid gray;
+  padding: 2%;
+  width: 90%;
+}
+
+.validtill-inputfield1, .validtill-inputfield2 {
   /* margin-left: 4%; */
   border-radius: 5px;
   border: 1px solid gray;
@@ -96,19 +104,19 @@ span {
   margin-left: 3%;
 }
 
-.Next-btn {
+.payment-Next-btn {
   width: 100%;
   margin-left: 10%;
   background: #355070;
   color: white;
 }
 
-.Next-btn:hover {
+.payment-Next-btn:hover {
   background: rgb(197, 194, 194);
   color: black;
 }
 
-.Go-Back-btn {
+.payment-Go-Back-btn {
   width: 100%;
   margin-left: 10%;
   background: white;
@@ -116,10 +124,14 @@ span {
   border: 1px solid black;
 }
 
-.Go-Back-btn:hover {
+.payment-Go-Back-btn:hover {
   background: rgb(197, 194, 194);
   color: black;
   border: 1px solid black;
+}
+
+.ValidCVV{
+  margin-left: 15%;
 }
 
 /* Media query for screens with a maximum width of 991px (tablet and smaller) */
@@ -131,6 +143,10 @@ span {
 
 /* Media query for screens with a maximum width of 767px (mobile) */
 @media (max-width: 767px) {
+  .left-side-column {
+    border: none !important;
+  }
+
   .leftimg {
     width: 100%; /* Set image width to 100% on mobile screens */
   }
@@ -150,7 +166,22 @@ span {
     margin-right: 5%; /* Adjust this value as needed */
   }
 
-  .left-side-column {
-    border: none;
+  .ValidCVV{
+    margin-left: 0%;
+  } 
+
+  .validtill-inputfield1{
+    margin-bottom: 5%;
+  }
+
+  .payment-Next-btn {
+    width: 60%;
+    margin-left: 0%;
+    margin-bottom: 5%;
+  }
+  
+  .payment-Go-Back-btn {
+    width: 60%;
+    margin-left: 0%;
   }
 }

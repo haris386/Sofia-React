@@ -33,11 +33,11 @@
     text-align: center;
   }
   
-  .email-heading {
+  .register-email-heading {
     text-align: left;
   }
   
-  .email-inputfield {
+  .register-email-inputfield {
     margin-left: 4%;
     border-radius: 5px;
     border: 1px solid gray;

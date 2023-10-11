@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import "./Login.css";
 import leftsideimg from "./img/leftsideimg.png";
@@ -10,15 +10,32 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 
-// ICONS 
+// ICONS
 import { FcGoogle } from "react-icons/fc";
-import { RiTwitterXLine } from "react-icons/ri";
 
-// REACT ROUTER 
+// REACT ROUTER
 import { Link } from "react-router-dom";
 
-
 export const Login = () => {
+  const [email, setEmail] = useState("");
+  const [error, setError] = useState("");
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
+
+  const handleLocalStorageAuthentication = () => {
+    const storedEmail = localStorage.getItem("email");
+
+    if (email === storedEmail) {
+      console.log("Successfully authenticated");
+      // Authentication successful
+      // Redirect to the authenticated page
+    } else {
+      setError("Authentication failed. Please check your email and password.");
+    }
+  };
+
   return (
     <>
       <Container fluid>
@@ -73,12 +90,14 @@ export const Login = () => {
               <Col md={3}></Col>
               <Col md={6}>
                 <Row>
-                  <h6 className="email-heading">Email</h6>
+                  <h6 className="login-email-heading">Email</h6>
                   <input
                     type="email"
                     name=""
                     id=""
-                    className="email-inputfield"
+                    className="login-email-inputfield"
+                    onChange={handleEmailChange}
+                    value={email}
                   />
                 </Row>
                 <br />
@@ -88,10 +107,11 @@ export const Login = () => {
                     type="password"
                     name=""
                     id=""
-                    className="password-inputfield"
+                    className="login-password-inputfield"
                   />
                 </Row>
                 <Row>
+                  &nbsp;
                   <Col md={12}>
                     <span className="forPword">Forgot Password?</span>
                   </Col>
@@ -103,21 +123,28 @@ export const Login = () => {
             <Row>
               <Col md={3}></Col>
               <Col md={6}>
-                <Button className="login-btn">LOGIN</Button>
+                <Button
+                  className="login-btn"
+                  onClick={handleLocalStorageAuthentication}
+                >
+                  LOGIN
+                </Button>
               </Col>
               <Col md={3}></Col>
               <span>OR</span>
               <Row>
                 <Col md={3}></Col>
                 <Col md={6}>
-                  <Button className="google-btn"><FcGoogle /> Sign in using Google</Button>
-                  &nbsp;
-                  <Button className="twitter-btn"><RiTwitterXLine /> Sign in using Twitter</Button>
-                  &nbsp;
+                  <Button className="google-btn">
+                    <FcGoogle /> Sign in using Google
+                  </Button>
                 </Col>
                 <Col md={3}></Col>
+                &nbsp;
               </Row>
-              <span>Don't have an account? <Link to="/register">Sign Up</Link></span>
+              <span>
+                Don't have an account? <Link to="/register">Sign Up</Link>
+              </span>
             </Row>
           </Col>
         </Row>

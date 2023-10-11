@@ -187,3 +187,21 @@
 .cl123 {
   margin-top: 10%;
 }
+
+@media (max-width: 767px) {
+  .tree-x-axis, .c1{
+    width: 13% !important;
+    height: 38px !important;
+  }
+
+  .tree-x-axis-line {
+    margin-top: 6% !important;
+  }
+
+  .Hline {
+    height: 114% !important; 
+  }
+  .download-template {
+    margin-bottom: 5%;
+  }
+}
