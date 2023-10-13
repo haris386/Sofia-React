@@ -1,0 +1,318 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
+.main {
+
+
+    .left {
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+
+        img {
+            height: 400px;
+            width: 500px;
+
+        }
+
+        .para {
+            // background-color: aqua;
+            height: 150px;
+            width: 450px;
+            // margin-top: 40px;
+
+            h5 {
+                font-family: Montserrat;
+                font-size: 25px;
+                font-weight: 600;
+                line-height: 37px;
+                letter-spacing: 0em;
+                text-align: left;
+                color: #355070;
+
+            }
+
+            p {
+                font-family: Montserrat;
+                font-size: 22px;
+                font-weight: 400;
+                line-height: 35px;
+                letter-spacing: 0em;
+                color: #355070;
+
+            }
+
+        }
+    }
+
+    //  ..............
+    .dirs {
+      // position: relative;
+      display: flex;
+      flex-direction: column;
+      height: 700px;
+      color: #00000033;
+      // border: 1px solid #00000033;
+      border: 1px solid #00000033;}
+
+    .right {
+      border-left: 1px solid #00000033;
+        // background-color: aquamarine;
+        .button1 {
+            background-color: #346F68;
+            height: 50px;
+            width: 50px;
+            border-radius: 30px;
+            color: white;
+            border: none;
+        }
+
+        .button2 {
+            background-color: #C4C4C4;
+            height: 50px;
+            width: 50px;
+            border-radius: 30px;
+            color: black;
+            border: none;
+        }
+
+        .button2:hover {
+            background-color: #346F68;
+        }
+
+        .profile-photo {
+            // background-color: #346F68;
+            margin-left: 120px;
+            margin-top: 30px;
+            width: 400px;
+
+            h5 {
+                font-family: Montserrat;
+                font-size: 27px;
+                font-weight: 400;
+                line-height: 33px;
+                letter-spacing: 0em;
+                color: #000000;
+
+            }
+
+            p {
+                font-family: Montserrat;
+                font-size: 17px;
+                font-weight: 400;
+                line-height: 21px;
+                letter-spacing: 0em;
+                text-align: left;
+                color: #000000;
+            }
+        }
+
+        @mixin object-center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          
+          $circleSize: 165px;
+          $radius: 100px;
+          $shadow: 0 0 10px 0 rgba(255,255,255,.35);
+          $fontColor: rgb(250,250,250);
+          
+          .profile-pic {
+            color: transparent;
+            transition: all .3s ease;
+            @include object-center;
+            position: relative;
+            transition: all .3s ease;
+            margin-left: 120px;
+            
+            input {
+              display: none;
+            }
+            
+            img {
+              position: absolute;
+              object-fit: cover;
+              width: $circleSize;
+              height: $circleSize;
+              box-shadow: $shadow;
+              border-radius: $radius;
+              z-index: 0;
+            }
+            
+            .-label {
+              cursor: pointer;
+              height: $circleSize;
+              width: $circleSize;
+            }
+            
+            &:hover {
+              .-label {
+                @include object-center;
+                background-color: rgba(0,0,0,.8);
+                z-index: 10000;
+                color: $fontColor;
+                transition: background-color .2s ease-in-out;
+                border-radius: $radius;
+                margin-bottom: 0;
+              }
+            }
+            
+            span {
+              display: inline-flex;
+              padding: .2em;
+              height: 2em;
+            }
+          }
+          
+          /////////////////////////
+          // Body styling 🐾
+          /////////---------->
+          
+          body {
+            height: 100vh;
+            background-color: rgb(25, 24, 21);
+            @include object-center;
+            
+            a:hover {
+              text-decoration: none;
+            }
+          }
+
+          .youT{
+            
+            font-family: Montserrat;
+font-size: 25px;
+font-weight: 450;
+line-height: 33px;
+letter-spacing: 0em;
+text-align: left;
+color: #000000;
+h4{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    text-align: start;
+    margin-left: 20%;
+    margin-top: 3%;
+}
+          }
+
+
+          .buttonsR{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+             margin-left: 90px;
+            .b1{
+                width: 136px;
+height: 47px;
+top: 622px;
+left: 1216px;
+border-radius: 5px;
+border: 1px solid #355070;
+color:#355070
+            }
+            .b1:hover{
+               background-color:#355070; 
+               color: white;
+            }
+            .b3{
+                width: 136px;
+height: 47px;
+top: 622px;
+left: 1216px;
+border-radius: 5px;
+border: 1px solid #355070;
+color:#355070
+            }
+            .b3:hover{
+               background-color:#355070; 
+               color: white;
+            }
+            .b2{
+                width: 136px;
+height: 47px;
+top: 622px;
+left: 1216px;
+border-radius: 5px;
+ 
+background-color: #355070;
+color:white;
+            }
+          }
+          .next{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin-left: 45px;
+            .b2{
+                width: 250px;
+height: 47px;
+ 
+border-radius: 5px;
+ 
+background-color: #355070;
+color:white;
+            }
+
+          }
+    }
+}
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+@media (max-width: 576px) {
+    .main{
+        .left{
+
+            .para{
+              width: 100%;
+               height: 100%;
+                // p,h5{
+                //      text-align: center;
+                //                    }
+
+            }
+
+        }
+
+
+
+    }
+  }
+
+// }
+// @media (max-width: 500px) {
+//     .main{
+//         .right{
+
+//             .para{
+
+//                p,h5{
+//  text-align: center;
+//  margin-left: 10%;
+
+//                }
+
+//             }
+
+//         }
+
+
+
+//     }
+
+//   }
+// }
+// @media (min-width: 987px) {
+//   .container-fluid.main {
+//       padding-right: 0; /* Remove padding on the right side */
+//       padding-left: 0;  /* Remove padding on the left side */
+//   }
+// }
