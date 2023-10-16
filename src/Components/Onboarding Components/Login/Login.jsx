@@ -53,7 +53,7 @@ export const Login = () => {
             <Row className="below-img-row">
               <Col md={3}></Col>
               <Col md={6}>
-                <h5>Insert Clever Tagline Here</h5>
+                <h5>THIS IS LOGIN PAGE</h5>
                 <p>
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                   Delectus magni eaque perspiciatis tenetur, animi veniam quod
