@@ -1,6 +1,6 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
-import "./Courseinventory.css";
+import "./Insuploadingsuccessful.css";
 import rightsideimg from "./img/rightsideimg.png";
 
 // BOOTSTRAP IMPORTS
@@ -10,7 +10,7 @@ import Col from "react-bootstrap/Col";
 
 import { AiOutlineCheck } from "react-icons/ai";
 
-export const Courseninventory = () => {
+export const Insuploadingsuccessful = () => {
   return (
     <Container fluid>
       <Row>
@@ -35,12 +35,12 @@ export const Courseninventory = () => {
                           <span class="Hline l1"></span>
                         </div>
                         <div class="linedata bd-grid">
-                          <h3 class="linetitle t1">Program Inventory</h3>
+                          <h3 class="linetitle t1">Upload the template back</h3>
                         </div>
                       </div>
                       <div class="linecontent">
                         <div class="linetime">
-                          <span class="Hrounder r2"></span>
+                          <span class="Hrounder r2"><AiOutlineCheck style={{ color: "white" }}/></span>
                           <span class="Hline l2"></span>
                         </div>
                         <div class="linedata bd-grid">
@@ -61,7 +61,7 @@ export const Courseninventory = () => {
                           <span class="Hrounder sr2"></span>
                           <span class="Hline sl2"></span>
                         </div>
-                        <div class="linedata bd-grid">
+                        <div class="linedata bd-grid actp">
                           <h3 class="linetitle st2">Assigning Courses to Programs</h3>
                         </div>
                       </div>
@@ -81,7 +81,7 @@ export const Courseninventory = () => {
                           <span class="Hline sl2"></span>
                         </div>
                         <div class="linedata bd-grid">
-                          <h3 class="linetitle st2">Instructor Details</h3>
+                          <h3 class="linetitle st3">Instructor Details</h3>
                         </div>
                       </div>
                       <div class="linecontent">
@@ -90,7 +90,7 @@ export const Courseninventory = () => {
                           <span class="Hline sl2"></span>
                         </div>
                         <div class="linedata bd-grid">
-                          <h3 class="linetitle sl2">Instructor Preference</h3>
+                          <h3 class="linetitle st4">Instructor Preference</h3>
                         </div>
                       </div>
                       <div class="linecontent">
@@ -99,12 +99,12 @@ export const Courseninventory = () => {
                           <span class="Hline sl2"></span>
                         </div>
                         <div class="linedata bd-grid">
-                          <h3 class="linetitle st2">Instructor Availability</h3>
+                          <h3 class="linetitle st5">Instructor Availability</h3>
                         </div>
                       </div>
                       <div class="linecontent">
                         <div class="linetime">
-                          <span class="Hrounder r3"></span>
+                          <span class="Hrounder r4"></span>
                         </div>
                         <div class="linedata bd-grid">
                           <h3 class="linetitle t7">Classroom Timeable</h3>
@@ -124,7 +124,7 @@ export const Courseninventory = () => {
           <Row>
             <Col md={3}></Col>
             <Col md={6}>
-              <h5 className="PI-heading">Course Inventory</h5>
+              <h5 className="PI-heading">Uploading Successful</h5>
               <p>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Lorem
                 ipsum, dolor sit amet consectetur adipisicing elit.
@@ -135,18 +135,16 @@ export const Courseninventory = () => {
               <br />
               <br />
               <Row>
+                <Col md={3}></Col>
                 <Col md={6}>
-                  <button className="download-template">
-                    Download Template
-                  </button>
+                  <button className="download-template">Save and Next</button>
                 </Col>
-                <Col md={6}>
-                  <button className="fill-up-template">Fill Up Form</button>
-                </Col>
+                <Col md={3}></Col>
+                <br />
+                <p className="skip-link">OR</p>
               </Row>
-              <br />
               <Row>
-                <p className="skip-link">Go Back</p>
+                <p className="skip-link">Go back</p>
               </Row>
             </Col>
             <Col md={3}></Col>

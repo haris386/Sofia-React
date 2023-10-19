@@ -128,7 +128,7 @@ export const Uploadtemplateback = () => {
           <Row>
             <Col md={3}></Col>
             <Col md={6}>
-              <h5 className="PI-heading">Uploading Successful</h5>
+              <h5 className="PI-heading">Upload the template back</h5>
               <p>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Lorem
                 ipsum, dolor sit amet consectetur adipisicing elit.

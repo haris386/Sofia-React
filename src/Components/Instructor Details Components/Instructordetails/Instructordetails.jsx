@@ -1,6 +1,6 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
-import "./Uploadsuccessful.css";
+import "./Instructordetails.css";
 import rightsideimg from "./img/rightsideimg.png";
 
 // BOOTSTRAP IMPORTS
@@ -8,7 +8,9 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
-export const Uploadsuccessful = () => {
+import { AiOutlineCheck } from "react-icons/ai";
+
+export const Instructordetails = () => {
   return (
     <Container fluid>
       <Row>
@@ -29,20 +31,38 @@ export const Uploadsuccessful = () => {
                     <div class="experience__container bd-grid">
                       <div class="linecontent">
                         <div class="linetime">
-                          <span class="Hrounder r1"></span>
+                          <span class="Hrounder r1"><AiOutlineCheck style={{ color: "white" }}/></span>
                           <span class="Hline l1"></span>
                         </div>
                         <div class="linedata bd-grid">
-                          <h3 class="linetitle t1">Program Inventory</h3>
+                          <h3 class="linetitle t1">Instructor Details</h3>
                         </div>
                       </div>
                       <div class="linecontent">
                         <div class="linetime">
-                          <span class="Hrounder r2"></span>
+                          <span class="Hrounder r2"><AiOutlineCheck style={{ color: "white" }}/></span>
                           <span class="Hline l2"></span>
                         </div>
                         <div class="linedata bd-grid">
-                          <h3 class="linetitle">Course Inventory</h3>
+                          <h3 class="linetitle t2">Course Inventory</h3>
+                        </div>
+                      </div>
+                      <div class="linecontent">
+                        <div class="linetime">
+                          <span class="Hrounder sr1"></span>
+                          <span class="Hline sl1"></span>
+                        </div>
+                        <div class="linedata bd-grid">
+                          <h3 class="linetitle st1">Course Details</h3>
+                        </div>
+                      </div>
+                      <div class="linecontent">
+                        <div class="linetime">
+                          <span class="Hrounder sr2"></span>
+                          <span class="Hline sl2"></span>
+                        </div>
+                        <div class="linedata bd-grid actp">
+                          <h3 class="linetitle st2">Assigning Courses to Programs</h3>
                         </div>
                       </div>
                       <div class="linecontent">
@@ -51,43 +71,43 @@ export const Uploadsuccessful = () => {
                           <span class="Hline l3"></span>
                         </div>
                         <div class="linedata bd-grid">
-                          <h3 class="linetitle">Instructor Inventory</h3>
+                          <h3 class="linetitle t3">Instructor Inventory</h3>
                         </div>
                       </div>
 
                       <div class="linecontent">
                         <div class="linetime">
-                          <span class="Hrounder r3"></span>
-                          <span class="Hline l3"></span>
+                          <span class="Hrounder sr2"></span>
+                          <span class="Hline sl2"></span>
                         </div>
                         <div class="linedata bd-grid">
-                          <h3 class="linetitle">Instructor Details</h3>
+                          <h3 class="linetitle st3">Instructor Details</h3>
                         </div>
                       </div>
                       <div class="linecontent">
                         <div class="linetime">
-                          <span class="Hrounder r3"></span>
-                          <span class="Hline l3"></span>
+                          <span class="Hrounder sr2"></span>
+                          <span class="Hline sl2"></span>
                         </div>
                         <div class="linedata bd-grid">
-                          <h3 class="linetitle">Instructor Preference</h3>
+                          <h3 class="linetitle st4">Instructor Preference</h3>
                         </div>
                       </div>
                       <div class="linecontent">
                         <div class="linetime">
-                          <span class="Hrounder r3"></span>
-                          <span class="Hline l3"></span>
+                          <span class="Hrounder sr2"></span>
+                          <span class="Hline sl2"></span>
                         </div>
                         <div class="linedata bd-grid">
-                          <h3 class="linetitle">Instructor Availability</h3>
+                          <h3 class="linetitle st5">Instructor Availability</h3>
                         </div>
                       </div>
                       <div class="linecontent">
                         <div class="linetime">
-                          <span class="Hrounder r3"></span>
+                          <span class="Hrounder r4"></span>
                         </div>
                         <div class="linedata bd-grid">
-                          <h3 class="linetitle">Classroom Timeable</h3>
+                          <h3 class="linetitle t7">Classroom Timeable</h3>
                         </div>
                       </div>
                     </div>
@@ -96,7 +116,6 @@ export const Uploadsuccessful = () => {
               </div>
             </div>
           </Container>
-          <button className="show-uploaded-files">Show Uploaded Files</button>
         </Col>
 
         {/* RIGHT SIDE COLUMN */}
@@ -105,7 +124,7 @@ export const Uploadsuccessful = () => {
           <Row>
             <Col md={3}></Col>
             <Col md={6}>
-              <h5 className="PI-heading">Uploading Successful</h5>
+              <h5 className="PI-heading">Instructor Details</h5>
               <p>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Lorem
                 ipsum, dolor sit amet consectetur adipisicing elit.
@@ -116,14 +135,16 @@ export const Uploadsuccessful = () => {
               <br />
               <br />
               <Row>
-                <Col md={3}></Col>
                 <Col md={6}>
-                  <button className="download-template">Save and Next</button>
+                  <button className="download-template">
+                    Download Template
+                  </button>
                 </Col>
-                <Col md={3}></Col>
-                <br />
-                <p className="skip-link">OR</p>
+                <Col md={6}>
+                  <button className="fill-up-template">Fill Up Form</button>
+                </Col>
               </Row>
+              <br />
               <Row>
                 <p className="skip-link">Go Back</p>
               </Row>

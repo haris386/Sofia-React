@@ -14,7 +14,7 @@ import { Paymentcards } from "./Components/Onboarding Components/PaymentCards/Pa
 // Program Inventory Screens Imports
 import { Programinventory } from "./Components/Program Inventory Components/ProgramInventory/Programinventory";
 import { Templateback } from "./Components/Program Inventory Components/TemplateBack/Templateback";
-import { Uploadsuccessful } from "./Components/Program Inventory Components/UploadSuccessful/Uploadsuccessful";
+import { Piuploadsuccessful } from "./Components/Program Inventory Components/UploadSuccessful/Piuploadsuccessful";
 import { Awaisuploadsuccessfulscreen } from "./Components/Program Inventory Components/AwaisUploadSuccessfulScreen/Awaisuploadsuccessfulscreen";
 import { Awaisfillouttheformscreen } from "./Components/Program Inventory Components/AwaisFillOutTheFormScreen/Awaisfillouttheformscreen";
 
@@ -22,6 +22,11 @@ import { Awaisfillouttheformscreen } from "./Components/Program Inventory Compon
 import { Courseninventory } from "./Components/Course Inventory Components/CourseInventory/Courseinventory";
 import { Uploadtemplateback } from "./Components/Course Inventory Components/UploadTemplateBack/Uploadtemplateback";
 import { Uploadingsuccessful } from "./Components/Course Inventory Components/UploadingSuccessful/Uploadingsuccessful";
+
+// Instructor Details Screen Imports
+import { Instructordetails } from "./Components/Instructor Details Components/Instructordetails/Instructordetails";
+import { Insuploadtemplateback } from './Components/Instructor Details Components/Insuploadtemplateback/Insuploadtemplateback'
+import { Insuploadingsuccessful } from "./Components/Instructor Details Components/Insuploadingsuccessful/Insuploadingsuccessful";
 
 function App() {
   return (
@@ -65,7 +70,7 @@ function App() {
           <Route path="/templateback" element={<Templateback />} />
 
           {/* Route for Upload Successful Screen */}
-          <Route path="/uploadsuccessful" element={<Uploadsuccessful />} />
+          <Route path="/uploadsuccessful" element={<Piuploadsuccessful />} />
 
           {/* Route for Awais Upload Successful Screen */}
           <Route
@@ -89,6 +94,24 @@ function App() {
           <Route
             path="/uploadingsuccessful"
             element={<Uploadingsuccessful />}
+          />
+          
+          {/* Route for Instructor Details Screen */}
+          <Route
+            path="/instructordetails"
+            element={<Instructordetails />}
+          />
+          
+          {/* Route for Upload Template Back Screen */}
+          <Route
+            path="/insuploadtemplateback"
+            element={<Insuploadtemplateback />}
+          />
+          
+          {/* Route for Upload Succesful Screen */}
+          <Route
+            path="/insuploadingsuccessful"
+            element={<Insuploadingsuccessful />}
           />
         </Routes>
       </Router>
