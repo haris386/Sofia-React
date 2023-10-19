@@ -62,14 +62,14 @@
     cursor: pointer;
   }
   
-  .login-btn {
+  .Reg-login-btn {
     width: 100%;
-    margin-left: 6%;
+    margin-left: 10% !important;
     background: #355070;
     border: none;
   }
   
-  .login-btn:hover {
+  .Reg-login-btn:hover {
     background: #213246;
   }
   
@@ -80,7 +80,7 @@
   
   .google-btn {
     width: 100%;
-    margin-left: 10%;
+    margin-left: 5%;
     background: white;
     color: black;
     border: 1px solid black;

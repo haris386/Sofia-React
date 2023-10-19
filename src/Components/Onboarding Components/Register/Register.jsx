@@ -12,14 +12,15 @@ import Button from "react-bootstrap/Button";
 
 // ICONS
 import { FcGoogle } from "react-icons/fc";
-import { RiTwitterXLine } from "react-icons/ri";
 
 // REACT ROUTER
-import { Link } from "react-router-dom";
+import { Link, useNavigate  } from "react-router-dom"; // Import useHistory from react-router-dom
 
 export const Register = () => {
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
+  const navigate = useNavigate(); // Initialize navigate
+
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
@@ -31,10 +32,11 @@ export const Register = () => {
     } else if (!/\S+@\S+\.\S+/.test(email)) {
       setError("Please enter a valid email address.");
     } else {
-      // Your registration logic goes here
-      // You can save the email and password to local storage for authentication
+      // Save the email in local storage
       localStorage.setItem("email", email);
-      // Redirect to another page or perform any necessary actions
+  
+      // Navigate to the next page, "/awaisregistrationscreen"
+      navigate("/awaisregistrationscreen");
     }
   };
 
@@ -110,17 +112,17 @@ export const Register = () => {
               <Col md={3}></Col>
               <Col md={6}>
                 {error && <p className="error-message">{error}</p>}
-                <Button className="login-btn" onClick={handleRegistration}>Continue with Email</Button>
+                <Button className="google-btn">
+                    <FcGoogle />
+                    Continue with Google
+                  </Button>
               </Col>
               <Col md={3}></Col>
               <span>OR</span>
               <Row>
                 <Col md={3}></Col>
                 <Col md={6}>
-                  <Button className="google-btn">
-                    <FcGoogle />
-                    Continue with Google
-                  </Button>
+                <Button className="Reg-login-btn" onClick={handleRegistration}>Next</Button>
                   &nbsp;
                 </Col>
                 <Col md={3}></Col>

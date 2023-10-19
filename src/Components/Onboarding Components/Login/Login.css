@@ -62,14 +62,14 @@ p {
   cursor: pointer;
 }
 
-.login-btn {
+.Log-login-btn {
   width: 100%;
   margin-left: 6%;
   background: #355070;
   border: none;
 }
 
-.login-btn:hover {
+.Log-login-btn:hover {
   background: #213246;
 }
 
@@ -82,7 +82,7 @@ Link {
   color: #355070;
 }
 
-.google-btn {
+.Log-google-btn {
   width: 100%;
   margin-left: 10%;
   background: white;
@@ -90,7 +90,7 @@ Link {
   border: 1px solid black;
 }
 
-.google-btn:hover {
+.Log-google-btn:hover {
   background: rgb(197, 194, 194);
   color: black;
   border: 1px solid black;
@@ -132,8 +132,8 @@ Link {
   }
 
   /* Add margin to login and sign-in buttons from the right */
-  .login-btn,
-  .google-btn,
+  .Log-login-btn,
+  .Log-google-btn,
   .twitter-btn {
     margin-right: 5%; /* Adjust this value as needed */
   }

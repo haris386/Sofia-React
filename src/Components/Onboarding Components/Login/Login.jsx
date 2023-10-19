@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import "./Login.css";
 import leftsideimg from "./img/leftsideimg.png";
@@ -14,26 +14,49 @@ import Button from "react-bootstrap/Button";
 import { FcGoogle } from "react-icons/fc";
 
 // REACT ROUTER
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 export const Login = () => {
+  const location = useLocation();
   const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+
+  const navigate = useNavigate(); // Get the navigate function
+
+  // Retrieve email from query parameters when the component mounts
+  useEffect(() => {
+    const searchParams = new URLSearchParams(location.search);
+    const queryEmail = searchParams.get("email");
+    setEmail(queryEmail || "");
+  }, [location.search]);
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
   };
 
-  const handleLocalStorageAuthentication = () => {
-    const storedEmail = localStorage.getItem("email");
+  const handlePasswordChange = (e) => {
+    setPassword(e.target.value);
+  };
 
-    if (email === storedEmail) {
-      console.log("Successfully authenticated");
+  const handleLocalStorageAuthentication = () => {
+    const email = new URLSearchParams(location.search).get("email");
+    const userInfo = getUserInfoFromLocalStorage(email);
+    const password = userInfo ? userInfo.password : ''; // Get the password from localStorage
+  
+    if (email && password === password) { // Compare to the entered password
       // Authentication successful
-      // Redirect to the authenticated page
+      console.log("SUCCESSFULLY AUTHENTICATED");
+      // Redirect to the dashboard or another page
     } else {
       setError("Authentication failed. Please check your email and password.");
     }
+  };
+
+  // Function to retrieve user information from localStorage
+  const getUserInfoFromLocalStorage = (email) => {
+    const storedInfo = localStorage.getItem(email);
+    return storedInfo ? JSON.parse(storedInfo) : null;
   };
 
   return (
@@ -94,7 +117,7 @@ export const Login = () => {
                   <input
                     type="email"
                     name=""
-                    id=""
+                    id="email"
                     className="login-email-inputfield"
                     onChange={handleEmailChange}
                     value={email}
@@ -106,8 +129,10 @@ export const Login = () => {
                   <input
                     type="password"
                     name=""
-                    id=""
+                    id="password"
                     className="login-password-inputfield"
+                    onChange={handlePasswordChange}
+                    value={password}
                   />
                 </Row>
                 <Row>
@@ -124,7 +149,7 @@ export const Login = () => {
               <Col md={3}></Col>
               <Col md={6}>
                 <Button
-                  className="login-btn"
+                  className="Log-login-btn"
                   onClick={handleLocalStorageAuthentication}
                 >
                   LOGIN
@@ -135,7 +160,7 @@ export const Login = () => {
               <Row>
                 <Col md={3}></Col>
                 <Col md={6}>
-                  <Button className="google-btn">
+                  <Button className="Log-google-btn">
                     <FcGoogle /> Sign in using Google
                   </Button>
                 </Col>
