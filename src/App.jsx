@@ -22,6 +22,9 @@ import { Awaisfillouttheformscreen } from "./Components/Program Inventory Compon
 import { Courseninventory } from "./Components/Course Inventory Components/CourseInventory/Courseinventory";
 import { Uploadtemplateback } from "./Components/Course Inventory Components/UploadTemplateBack/Uploadtemplateback";
 import { Uploadingsuccessful } from "./Components/Course Inventory Components/UploadingSuccessful/Uploadingsuccessful";
+import { CIAwaisfillouttheformscreen } from "./Components/Course Inventory Components/CIAwaisfillouttheformscreen/CIAwaisfillouttheformscreen";
+import { CIAwaiscourseassigning } from "./Components/Course Inventory Components/CIAwaiscourseassigning/CIAwaiscourseassigning";
+
 
 // Instructor Details Screen Imports
 import { Instructordetails } from "./Components/Instructor Details Components/Instructordetails/Instructordetails";
@@ -33,6 +36,8 @@ function App() {
     <>
       <Router>
         <Routes>
+          {/* =============================== ONBOARDING SCREENS ROUTES =============================== */}
+
           {/* Default route to Login */}
           <Route path="/" element={<Login />} />
 
@@ -63,6 +68,8 @@ function App() {
           {/* Route for Payment Cards Screen */}
           <Route path="/paymentcards" element={<Paymentcards />} />
 
+          {/* =============================== PROGRAM INVENTORY SCREEN ROUTES =============================== */}
+
           {/* Route for Program Inventory Screen */}
           <Route path="/programinventory" element={<Programinventory />} />
 
@@ -78,11 +85,13 @@ function App() {
             element={<Awaisuploadsuccessfulscreen />}
           />
 
-          {/* Route for Awais Fill Out The Form Screen */}
+          {/* Route for Awais Program Inventory Fill Out The Form Screen */}
           <Route
             path="/awaisfillouttheform"
             element={<Awaisfillouttheformscreen />}
           />
+
+          {/* =============================== COURSE INVENTORY SCREENS ROUTES =============================== */}
 
           {/* Route for Course Inventory Screen */}
           <Route path="/courseinventory" element={<Courseninventory />} />
@@ -96,6 +105,20 @@ function App() {
             element={<Uploadingsuccessful />}
           />
           
+          {/* Route for Awais Course Inventory Fill Out The Form Screen */}
+          <Route
+            path="/awaiscinvfillouttheform"
+            element={<CIAwaisfillouttheformscreen />}
+          />
+          
+          {/* Route for Awais Course Inventory Course Assigning Screen */}
+            <Route
+            path="/awaisciacourseassigning"
+            element={<CIAwaiscourseassigning />}
+          />
+
+          {/* =============================== INSTRUCTOR DETAILS SCREENS ROUTES =============================== */}
+
           {/* Route for Instructor Details Screen */}
           <Route
             path="/instructordetails"

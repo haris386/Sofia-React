@@ -4,14 +4,14 @@
      height: 700px;
 
      .button1 {
-        background-color: #C4C4C4;
-        height: 50px;
-        width: 50px;
-        border-radius: 30px;
-        color: black;
-        border: none;
-        font-weight: 600;
-        font-size: 25px;
+         background-color: #C4C4C4;
+         height: 50px;
+         width: 50px;
+         border-radius: 30px;
+         color: black;
+         border: none;
+         font-weight: 600;
+         font-size: 25px;
      }
 
      .style {
@@ -20,14 +20,14 @@
      }
 
      .button2 {
-        background-color: #FFFFFF;
-        height: 50px;
-        width: 50px;
-        border-radius: 30px;
-        color: black;
-        border: none;
-        font-weight: 600;
-        font-size: 25px;
+         background-color: #FFFFFF;
+         height: 50px;
+         width: 50px;
+         border-radius: 30px;
+         color: black;
+         border: none;
+         font-weight: 600;
+         font-size: 25px;
      }
 
      .button2:hover {
@@ -50,8 +50,8 @@
                  padding-bottom: 70px;
 
                  h5 {
-                    text-align: start;
-                    width: 190px;
+                     padding-top: 18px;
+                      text-align: start;
                  }
              }
 
@@ -145,7 +145,7 @@
             // background-color: aqua;
         }
         .text-set{
-            margin-top: 60px;
+            margin-top: 0px;
             height: 190px;
             width: 600px;
              
@@ -173,17 +173,140 @@
             }
         }
 
+    //    .........................................
+//  /* Styles for the scrollable container */
+
+.table-container {
+    /* Add width and other styles as needed */
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    border-right: 1px solid  #00000033;
+    // border-radius: 20px;
+    
+     
+}
+
+/* Styles for the table within the scrollable container */
+.table-scroll {
+    overflow-y: auto; /* Enable vertical scrolling */
+    height: 300px; /* Set the desired height for the scrollable area */
+    padding-right: 10px; /* Add a gap on the left side */
+    
+    // border-top :1px solid #00000033;
+   
+    // border-bottom: 1px solid #00000033;
+    // border-left: 1px solid #00000033;
+    // border-bottom-left-radius: 20px;
+    // border-top-left-radius: 20px;
+    
+}
+
+/* Hide the default scrollbar to avoid conflicts */
+.table-scroll::-webkit-scrollbar {
+    width: 12px; /* Adjust as needed */
+    scrollbar-color: #333 #f5f5f5;
+}
+
+/* Style the scrollbar track */
+.table-scroll::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Track color */
+    scrollbar-color: #333 #f5f5f5;
+    border-radius: 5px;
+    
+}
+
+/* Style the scrollbar thumb */
+.table-scroll::-webkit-scrollbar-thumb {
+     
+    background: #333; /* Thumb color */
+    // width: 10px;
+    border-radius: 5px; /* Rounded corners */
+}
+
+/* Style the table headers if needed */
+.table th {
+ 
+}
+ 
+
+    //    ......................................
+        // .table-container {
+        
+        //     // padding-right: 20px;
+        //     max-height: 350px; /* Adjust the max height as needed */
+        //     overflow: auto;
+        //     border-radius: 10px; /* Adjust the border radius as needed */
+        //     scrollbar-width: thin;
+        //     scrollbar-color: #333 #f5f5f5;
+              
+        //   }
+        //   .table-container::-webkit-scrollbar{
+            
+        //     width: 12px;
+        //     // padding-left: 10px;
+           
+        //   } 
+        //   .table-container::-webkit-scrollbar-track{
+       
+        //     background: #f5f5f5; /* Track color */
+        //     border-radius: 10px; /* Rounded corners */
+        //     height: 40px;
+        //   }
+        //   .table-container::-webkit-scrollbar-thumb{
+           
+        //     background: #333; /* Thumb color */
+        //     border-radius: 10px; /* Rounded corners */
+        //     height: 20px !important;
+        //     width: 12px !important;
+        //   }
+        //   .table-scroll::-webkit-scrollbar{
+            
+        //     width: 12px;
+            
+           
+        //   } 
+
         tr {
-            height: 30px; /* Change the row height as needed */
+            height: 0px; /* Change the row height as needed */
         }
 
         th {
-            height: 20px; /* Change the header row height as needed */
+            height: 50px; /* Change the header row height as needed */
             background-color: #f0f0f0; /* Background color for header row */
             text-align: center; /* Center header text */
+            
         }
 
         td {
             text-align: center; /* Center cell text */
+        }
+
+        .btn-set{
+            // background-color: aquamarine;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            // gap: 15px;
+             
+            .set1 {
+                width: 200px;
+                // height: 50px;
+               margin-top: 8px;
+               color: white;
+               background-color:#355070 ;
+               /* Adjust the text color as needed */
+            //    border: 1px solid #355070;
+               /* Remove the button border */
+               
+              
+               // align-items: end;
+           }
+           .set1:hover {
+            background-color: #355070;
+            /* Adjust the active background color */
+            color: #FFFFFF;
+        }
         }
      }

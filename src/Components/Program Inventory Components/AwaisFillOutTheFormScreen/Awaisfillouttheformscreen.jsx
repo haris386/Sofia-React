@@ -1,10 +1,21 @@
 import React from "react";
+import "./Awaisfillouttheformscreen.scss";
 
 export const Awaisfillouttheformscreen = () => {
+  const cells = document.querySelectorAll(".editable");
+
+  // Add event listeners to each editable cell
+  cells.forEach((cell) => {
+    cell.addEventListener("blur", () => {
+      // When a cell loses focus (on blur), save the content
+      // You can send this data to your server or save it locally
+      console.log(cell.textContent);
+    });
+  });
   return (
     <div class="container-fluid">
       <div class="row">
-        <div class=" col-sm-12 col-md-4 col-lg-4 left">
+        <div class=" col-sm-12 col-md-12 col-lg-4 left">
           <div className="row d-flex flex-row justify-content-center p-3">
             <button type="button" className="btn   button1">
               1
@@ -54,14 +65,14 @@ export const Awaisfillouttheformscreen = () => {
               <div className="text">
                 <h5>Program Inventory</h5>
                 <h5>Course Inventory</h5>
-                <h5>inventort program</h5>
-                <h5>inventort program</h5>
-                <h5>inventort program</h5>
+                <h5>Instructor Inventory</h5>
+                <h5>Instructor Details</h5>
+                <h5>Classroom Timetable</h5>
               </div>
             </div>
           </div>
         </div>
-        <div class=" col-md-8 col-lg-8  ">
+        <div class=" col-sm-12 col-md-12 col-lg-8  ">
           <div className="row right">
             <div class="p-4 text-set">
               <h4>Fill out the form</h4>
@@ -89,82 +100,75 @@ export const Awaisfillouttheformscreen = () => {
                     </th>
                   </tr>
                 </thead>
-                <tbody>
+                <tbody id="table-body">
+                  {/* <!-- You can populate this with your data --> */}
                   <tr>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
+                    <td class="editable" contenteditable="true"></td>
+                    <td class="editable" contenteditable="true"></td>
+                    <td class="editable" contenteditable="true"></td>
+                    <td class="editable" contenteditable="true"></td>
                   </tr>
                   <tr>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
+                    <td class="editable" contenteditable="true"></td>
+                    <td class="editable" contenteditable="true"></td>
+                    <td class="editable" contenteditable="true"></td>
+                    <td class="editable" contenteditable="true"></td>
                   </tr>
                   <tr>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
+                    <td class="editable" contenteditable="true"></td>
+                    <td class="editable" contenteditable="true"></td>
+                    <td class="editable" contenteditable="true"></td>
+                    <td class="editable" contenteditable="true"></td>
                   </tr>
                   <tr>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
+                    <td class="editable" contenteditable="true"></td>
+                    <td class="editable" contenteditable="true"></td>
+                    <td class="editable" contenteditable="true"></td>
+                    <td class="editable" contenteditable="true"></td>
                   </tr>
                   <tr>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
+                    <td class="editable" contenteditable="true"></td>
+                    <td class="editable" contenteditable="true"></td>
+                    <td class="editable" contenteditable="true"></td>
+                    <td class="editable" contenteditable="true"></td>
                   </tr>
                   <tr>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
+                    <td class="editable" contenteditable="true"></td>
+                    <td class="editable" contenteditable="true"></td>
+                    <td class="editable" contenteditable="true"></td>
+                    <td class="editable" contenteditable="true"></td>
                   </tr>
                   <tr>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
+                    <td class="editable" contenteditable="true"></td>
+                    <td class="editable" contenteditable="true"></td>
+                    <td class="editable" contenteditable="true"></td>
+                    <td class="editable" contenteditable="true"></td>
                   </tr>
                   <tr>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
+                    <td class="editable" contenteditable="true"></td>
+                    <td class="editable" contenteditable="true"></td>
+                    <td class="editable" contenteditable="true"></td>
+                    <td class="editable" contenteditable="true"></td>
                   </tr>
                   <tr>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
+                    <td class="editable" contenteditable="true"></td>
+                    <td class="editable" contenteditable="true"></td>
+                    <td class="editable" contenteditable="true"></td>
+                    <td class="editable" contenteditable="true"></td>
                   </tr>
-                  <tr>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                  </tr>
-                  <tr>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                  </tr>
-                  <tr>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                    <td></td>
-                  </tr>
+
+                  {/* <!-- Repeat for other rows --> */}
                 </tbody>
               </table>
             </div>
+
+            <div className="  btn-set">
+              <button className="btn  set1 ">Save and Next</button>
+            </div>
+            <p className="mt-2">Or</p>
+            <a href="#" style={{ color: "#355070", textDecoration: "none" }}>
+              Download Template
+            </a>
           </div>
         </div>
       </div>
