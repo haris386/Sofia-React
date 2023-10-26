@@ -30,6 +30,7 @@ import { CIAwaiscourseassigning } from "./Components/Course Inventory Components
 import { Instructordetails } from "./Components/Instructor Details Components/Instructordetails/Instructordetails";
 import { Insuploadtemplateback } from './Components/Instructor Details Components/Insuploadtemplateback/Insuploadtemplateback'
 import { Insuploadingsuccessful } from "./Components/Instructor Details Components/Insuploadingsuccessful/Insuploadingsuccessful";
+import { AwaisInsfillouttheform } from "./Components/Instructor Details Components/AwaisInsfillouttheform/AwaisInsfillouttheform";
 
 function App() {
   return (
@@ -135,6 +136,12 @@ function App() {
           <Route
             path="/insuploadingsuccessful"
             element={<Insuploadingsuccessful />}
+          />
+         
+          {/* Route for Awais Fill out the form Screen */}
+          <Route
+            path="/awaisInsfillouttheform"
+            element={<AwaisInsfillouttheform />}
           />
         </Routes>
       </Router>
