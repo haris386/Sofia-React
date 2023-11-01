@@ -35,7 +35,7 @@ import { AwaisInsfillouttheform } from "./Components/Instructor Details Componen
 function App() {
   return (
     <>
-    {/* awaid  */}
+    
     {/* ROUTES FOR ALL THE SCREENS */}
       <Router>
         <Routes>
