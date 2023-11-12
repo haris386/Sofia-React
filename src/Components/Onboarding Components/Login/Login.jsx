@@ -1,4 +1,9 @@
 import React, { useState, useEffect } from "react";
+
+// FIREBASE IMPORTS
+import { auth, googleAuthProvider } from "../../Firebase/firebase";
+import { signInWithPopup } from "firebase/auth";
+
 import "bootstrap/dist/css/bootstrap.css";
 import "./Login.css";
 import leftsideimg from "./img/leftsideimg.png";
@@ -58,6 +63,21 @@ export const Login = () => {
     const storedInfo = localStorage.getItem(email);
     return storedInfo ? JSON.parse(storedInfo) : null;
   };
+
+  // GOOGLE AUTHENTICATION
+  const handleSignInWithGoogle = async () => {
+    try {
+      const result = await signInWithPopup(auth, googleAuthProvider)
+      console.log(result);
+      localStorage.setItem('token', result.user.accessToken);
+      localStorage.setItem('user', JSON.stringify(result.user));
+      console.log("SUCCESSFULLY AUTHENTICATED WITH GOOGLE")
+      navigate('/courseinventory')
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
 
   return (
     <>
@@ -160,7 +180,7 @@ export const Login = () => {
               <Row>
                 <Col md={3}></Col>
                 <Col md={6}>
-                  <Button className="Log-google-btn">
+                  <Button className="Log-google-btn" onClick={handleSignInWithGoogle}>
                     <FcGoogle /> Sign in using Google
                   </Button>
                 </Col>
