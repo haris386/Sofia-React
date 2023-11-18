@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.main-links-navbar {
+  padding: 10px 0 10px 28px;
+}
+
+.main-navbar-2 {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: white; /* Add a background color if needed */
+}
+
+.title {
+  font-size: 35px;
+  color: black;
+  font-weight: bold;
+}
+
+.pages-links {
+  padding: 0 10px;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+  letter-spacing: 1.2px;
+}
+
+.pages-links:hover {
+  color: #fa4e35;
+}
+
+.button1 {
+  margin-left: 20px;
+  background-color: white !important;
+  color: black;
+  border: 1px solid #fa4e35;
+  border-radius: 10px;
+  font-weight: bold;
+  padding: 7px 30px;
+}
+
+.button1:hover {
+  color: #fa4e35;
+}
+
+
+.button2 {
+  margin-left: 20px;
+  background-color: #fa4e35;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  padding: 10px 30px;
+}
+
+.button2:hover {
+  color: white;
+}
+
+
+.button3 {
+  padding: 8% 20%;
+  border-radius: 50px;
+  border-radius: 50px;
+  color: white;
+  font-size: 20px;
+  background-color: #fa4e35;
+}
+
+.button3:hover {
+  color: white;
+}
+
+h2 {
+  margin-top: 25%;
+  font-size: 50px;
+  text-align: left;
+  margin-left: 0px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.hero-para {
+  margin-top: 50px;
+  text-align: left;
+  /* font-size: 18px; */
+  /* margin-right: 70px; */
+  margin-right: 39px;
+  color: rgb(141, 141, 141);
+}
+
+.herorightsideimg {
+  margin-top: 32px;
+  width: 90%;
+}
+
+.footer {
+  text-align: left;
+}
+
+/* Common Styles */
+.footer {
+  padding: 30px 0;
+  text-align: center;
+}
+
+.footer h1 {
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+.footer span {
+  display: block;
+  margin-top: 10px;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer li {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* Mobile Styles */
+@media only screen and (max-width: 767px) {
+  h2 {
+    font-size: 20px !important; /* Adjust the font size for better mobile appearance */
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .button3 { 
+    padding: 5% 10%;
+  }
+
+  .hero-para {
+    text-align: center;
+    margin-right: 0; 
+  }
+
+  .herorightsideimg {
+    width: 100%; 
+    margin-top: 23px;
+  }
+
+  .footer h1 {
+    font-size: 20px;
+  }
+
+  .footer ul {
+    text-align: center;
+  }
+
+  .footer li {
+    margin-bottom: 5px;
+  }
+
+  .footer span {
+    margin-top: 20px;
+  }
+
+  .footer a {
+    display: block;
+  }
+}
