@@ -16,6 +16,8 @@ import giphy from "./img/giphy.gif";
 import { BsEnvelope } from "react-icons/bs";
 import { FaLinkedin, FaYoutube, FaFacebookSquare } from "react-icons/fa";
 
+import { Link} from "react-router-dom";
+
 export const Landingpage = () => {
   return (
     <>
@@ -57,12 +59,12 @@ export const Landingpage = () => {
               <a href="#pricing" className="pages-links">
                 Pricing
               </a>
-              <a href="#" className="button1">
+              <Link to="/login" className="button1">
                 Login
-              </a>
-              <a href="#" className="button2">
+              </Link>
+              <Link to="/register" className="button2">
                 Sign Up Free
-              </a>
+              </Link>
             </ul>
           </Navbar.Collapse>
         </Container>

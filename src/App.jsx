@@ -6,8 +6,8 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Landingpage } from "./Components/Landing Page/Landingpage";
 
 // OnBoarding Screens Imports
-// import { Login } from "./Components/Onboarding Components/Login/Login";
-// import { Register } from "./Components/Onboarding Components/Register/Register";
+import { Login } from "./Components/Onboarding Components/Login/Login";
+import { Register } from "./Components/Onboarding Components/Register/Register";
 // import { Awaisregisterationscreen } from "./Components/Onboarding Components/AwaisRegisterationScreen/Awaisregisterationscreen";
 // import { Awaisprofilescreen } from "./Components/Onboarding Components/AwaisProfileScreen/Awaisprofilescreen";
 // import { Awaisplanscreen } from "./Components/Onboarding Components/AwaisPlanScreen/Awaisplanscreen";
@@ -54,10 +54,10 @@ function App() {
           {/* <Route path="/" element={<Login />} /> */}
 
           {/* Route for Login */}
-          {/* <Route path="/login" element={<Login />} /> */}
+          <Route path="/login" element={<Login />} />
 
           {/* Route for Register */}
-          {/* <Route path="/register" element={<Register />} /> */}
+          <Route path="/register" element={<Register />} />
 
           {/* Route for Awais Registeration Screen */}
           {/* <Route
