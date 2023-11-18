@@ -2,14 +2,17 @@ import "./App.css";
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
+// Landing Page Import
+import { Landingpage } from "./Components/Landing Page/Landingpage";
+
 // OnBoarding Screens Imports
-import { Login } from "./Components/Onboarding Components/Login/Login";
-import { Register } from "./Components/Onboarding Components/Register/Register";
-import { Awaisregisterationscreen } from "./Components/Onboarding Components/AwaisRegisterationScreen/Awaisregisterationscreen";
-import { Awaisprofilescreen } from "./Components/Onboarding Components/AwaisProfileScreen/Awaisprofilescreen";
-import { Awaisplanscreen } from "./Components/Onboarding Components/AwaisPlanScreen/Awaisplanscreen";
-import { RegisterationAlmostDone } from "./Components/Onboarding Components/RegisterationAlmostDone/RegisterationAlmostDone";
-import { Paymentcards } from "./Components/Onboarding Components/PaymentCards/Paymentcards";
+// import { Login } from "./Components/Onboarding Components/Login/Login";
+// import { Register } from "./Components/Onboarding Components/Register/Register";
+// import { Awaisregisterationscreen } from "./Components/Onboarding Components/AwaisRegisterationScreen/Awaisregisterationscreen";
+// import { Awaisprofilescreen } from "./Components/Onboarding Components/AwaisProfileScreen/Awaisprofilescreen";
+// import { Awaisplanscreen } from "./Components/Onboarding Components/AwaisPlanScreen/Awaisplanscreen";
+// import { RegisterationAlmostDone } from "./Components/Onboarding Components/RegisterationAlmostDone/RegisterationAlmostDone";
+// import { Paymentcards } from "./Components/Onboarding Components/PaymentCards/Paymentcards";
 
 // Program Inventory Screens Imports
 import { Programinventory } from "./Components/Program Inventory Components/ProgramInventory/Programinventory";
@@ -39,37 +42,43 @@ function App() {
     {/* ROUTES FOR ALL THE SCREENS */}
       <Router>
         <Routes>
+
+          {/* =============================== LANDING PAGE SCREENS ROUTES =============================== */}
+          
+          {/* Default route to Login */}
+          <Route path="/" element={<Landingpage />} />
+
           {/* =============================== ONBOARDING SCREENS ROUTES =============================== */}
 
           {/* Default route to Login */}
-          <Route path="/" element={<Login />} />
+          {/* <Route path="/" element={<Login />} /> */}
 
           {/* Route for Login */}
-          <Route path="/login" element={<Login />} />
+          {/* <Route path="/login" element={<Login />} /> */}
 
           {/* Route for Register */}
-          <Route path="/register" element={<Register />} />
+          {/* <Route path="/register" element={<Register />} /> */}
 
           {/* Route for Awais Registeration Screen */}
-          <Route
+          {/* <Route
             path="/awaisregistrationscreen"
             element={<Awaisregisterationscreen />}
-          />
+          /> */}
 
           {/* Route for Awais Profile Screen */}
-          <Route path="/awaisprofilescreen" element={<Awaisprofilescreen />} />
+          {/* <Route path="/awaisprofilescreen" element={<Awaisprofilescreen />} /> */}
 
           {/* Route for Awais Plan Screen */}
-          <Route path="/awaisplanscreen" element={<Awaisplanscreen />} />
+          {/* <Route path="/awaisplanscreen" element={<Awaisplanscreen />} /> */}
 
           {/* Route for Registration Almost Done Screen */}
-          <Route
+          {/* <Route
             path="/registrationalmostdone"
             element={<RegisterationAlmostDone />}
-          />
+          /> */}
 
           {/* Route for Payment Cards Screen */}
-          <Route path="/paymentcards" element={<Paymentcards />} />
+          {/* <Route path="/paymentcards" element={<Paymentcards />} /> */}
 
           {/* =============================== PROGRAM INVENTORY SCREEN ROUTES =============================== */}
 
