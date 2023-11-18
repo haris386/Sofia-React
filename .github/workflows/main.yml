@@ -1,4 +1,4 @@
-name: React CI/CD
+name: React-Sofia CI/CD
 
 on:
   push:
