@@ -1,7 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
 
+html,
 body {
-  font-family: 'Montserrat', sans-serif;
+  height: 100%;
+  margin: 0;
+}
+
+.main-landing-page-container {
+  font-family: "Montserrat", sans-serif;
+  /* font-family: 'Engula Black', sans-serif; */
+  background-image: url("./img/bg.png"); /* Adjust the path based on your project structure */
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 619px;
+}
+
+.logo img {
+  width: 115px; /* Set the width of the logo as needed */
+  height: auto; /* Maintain aspect ratio */
+}
+
+ul {
+  margin-top: 2%;
 }
 
 .main-links-navbar {
@@ -12,7 +32,52 @@ body {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background-color: white; /* Add a background color if needed */
+  background-color: transparent; /* Add a background color if needed */
+}
+
+.heading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 23%;
+}
+
+.heading {
+  font-size: 46px;
+  text-align: left;
+  margin-left: 0px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: white;
+  opacity: 0; /* Hide all headings initially */
+  position: absolute;
+}
+
+.heading:nth-child(1) {
+  animation: fadeInOut 20s infinite; /* Adjust the duration as needed */
+}
+
+.heading:nth-child(2) {
+  animation: fadeInOut 20s infinite 5s; /* Adjust the delay as needed */
+}
+
+.heading:nth-child(3) {
+  animation: fadeInOut 20s infinite 10s; /* Adjust the delay as needed */
+}
+
+.heading:nth-child(4) {
+  animation: fadeInOut 20s infinite 15s; /* Adjust the delay as needed */
+}
+
+@keyframes fadeInOut {
+  0%,
+  20% {
+    opacity: 1;
+  }
+  25%,
+  100% {
+    opacity: 0;
+  }
 }
 
 .title {
@@ -35,33 +100,34 @@ body {
 
 .button1 {
   margin-left: 20px;
-  background-color: white !important;
-  color: black;
-  border: 1px solid #fa4e35;
+  background-color: #7240c9 !important;
+  color: white;
+  border: none;
   border-radius: 10px;
-  font-weight: bold;
-  padding: 7px 30px;
+  font-weight: 400;
+  padding: 10px 30px;
 }
-
-.button1:hover {
-  color: #fa4e35;
-}
-
 
 .button2 {
   margin-left: 20px;
-  background-color: #fa4e35;
-  color: white;
-  border: none;
+  background-color: white;
+  color: #7240c9;
+  border: 2px solid #7240c9;
   border-radius: 10px;
   font-weight: bold;
   padding: 10px 30px;
 }
 
-.button2:hover {
-  color: white;
+.button1:hover {
+  background-color: white !important;
+  color: #7240c9;
+  border: 2px solid #7240c9;
 }
 
+.button2:hover {
+  background-color: #7240c9 !important;
+  color: white;
+}
 
 .button3 {
   padding: 8% 20%;
@@ -77,12 +143,13 @@ body {
 }
 
 h2 {
-  margin-top: 25%;
-  font-size: 50px;
+  margin-top: 11%;
+  font-size: 37px;
   text-align: left;
   margin-left: 0px;
   font-weight: bold;
   margin-bottom: 20px;
+  color: white;
 }
 
 .hero-para {
@@ -95,65 +162,230 @@ h2 {
 }
 
 .herorightsideimg {
-  margin-top: 32px;
-  width: 90%;
+  /* margin-top: 32px; */
+  width: 85%;
 }
 
-.footer {
-  text-align: left;
+.orbit-container {
+  position: relative;
+  width: 350px;
+  height: 350px;
+  margin: auto;
+
 }
+
+.glass-circle {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.3));
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  z-index: 1;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+.orbiting-square {
+  width: 150px; /* Adjust the size of the square as needed */
+  height: 150px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -25px; /* Half of the square's height */
+  margin-left: -25px; /* Half of the square's width */
+  transform-origin: center top;
+  background-color: rgb(237, 237, 12); /* Set the background color to yellow */
+  border-radius: 10px;
+  animation: orbitSquare 6s linear infinite;
+}
+
+@keyframes orbitSquare {
+  0% {
+    transform: translateX(-50%) translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateX(0) translateY(50%) rotate(90deg);
+  }
+  50% {
+    transform: translateX(50%) translateY(0) rotate(180deg);
+  }
+  75% {
+    transform: translateX(0) translateY(-50%) rotate(270deg);
+  }
+  100% {
+    transform: translateX(-50%) translateY(0) rotate(360deg);
+  }
+}
+
+
+/* LOGIN PAGE CSS STARTS HERE*/
+.box {
+  background-color: white;
+  padding: 5% 10%;
+  border-radius: 10px;
+}
+
+.login-title {
+  font-family: monospace;
+  font-weight: 500 !important;
+  font-size: 20px;
+  margin-bottom: 5%;
+}
+
+.sign-in-using-gt {
+  margin-bottom: 5%;
+  font-family: monospace;
+  font-size: 15px;
+  color: #7240c9;
+}
+
+.input-fields {
+  border: 1px solid #c1c1c1;
+  border-radius: 6px;
+  padding: 3%;
+  font-size: 15px;
+  margin-bottom: 5%;
+  position: relative;
+}
+
+
+.OR {
+  margin-bottom: 4%;
+  font-family: monospace;
+  color: gray;
+  text-align: center;
+}
+
+.OR {
+  margin-bottom: 4%;
+  font-family: monospace;
+  color: gray;
+  text-align: center;
+}
+
+/* Add this CSS for lines above and below OR */
+.OR::before,
+.OR::after {
+  content: "━━━━━━━━━━━";
+  display: inline-block;
+  width: 35%;
+  color: gray;
+}
+
+.OR::before {
+  margin-right: 1%;
+}
+
+.OR::after {
+  margin-left: 1%;
+}
+
+
+.forgot-password {
+  font-family: monospace;
+  font-size: 14px;
+  text-align: left;
+  margin-bottom: 5%;
+  color: #7240c9;
+}
+
+.login-btn {
+  width: 98%;
+  margin: auto;
+  background-color: #7240c9;
+  font-family: monospace;
+  font-size: 20px;
+  margin-bottom: 10%;
+}
+
+.dhaa{
+  margin-bottom: 2%;
+  font-family: monospace;
+}
+
+.OR{
+  margin-bottom: 4%;
+  font-family: monospace;
+  color: gray;
+}
+/* LOGIN PAGE CSS ENDS HERE */
+
+
+
 
 /* Common Styles */
 .footer {
-  padding: 30px 0;
+  margin-top: 10%;
   text-align: center;
 }
 
 .footer h1 {
   margin-bottom: 15px;
-  font-size: 24px;
+  font-size: 20px;
 }
 
 .footer span {
   display: block;
   margin-top: 10px;
+  color: white;
+  font-weight: 300; /* Adjust the font weight as needed */
 }
 
 .footer ul {
   list-style: none;
   padding: 0;
+  text-align: center;
 }
 
 .footer li {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   font-weight: bold;
+}
+
+.footer span {
+  margin-top: 20px;
 }
 
 .footer a {
   text-decoration: none;
   color: #333;
+  display: block;
+}
+
+span {
+  margin-left: 0% !important;
 }
 
 /* Mobile Styles */
 @media only screen and (max-width: 767px) {
+  
+  .main-landing-page-container {
+    height: 664px;
+  }
+  
   h2 {
     font-size: 20px !important; /* Adjust the font size for better mobile appearance */
     text-align: center;
     margin-top: 20px;
   }
 
-  .button3 { 
+  .button3 {
     padding: 5% 10%;
   }
 
   .hero-para {
     text-align: center;
-    margin-right: 0; 
+    margin-right: 0;
   }
 
   .herorightsideimg {
-    width: 100%; 
+    width: 100%;
     margin-top: 23px;
+  }
+  
+  .footer {
+    margin-top: 25% !important; /* Added for mobile devices */
   }
 
   .footer h1 {
@@ -175,4 +407,81 @@ h2 {
   .footer a {
     display: block;
   }
+
+  .main-navbar-2 {
+    padding: 10px 0; /* Add padding for better spacing */
+  }
+
+  .title {
+    font-size: 25px; /* Adjust the font size for better mobile appearance */
+  }
+
+  .main-links-navbar {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .pages-links {
+    padding: 10px 28px; /* Add padding to adjust spacing */
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    letter-spacing: 1.2px;
+  }
+
+  .button1,
+  .button2 {
+    margin-left: 0; /* Align buttons to the left */
+  }
+
+  .button3 {
+    padding: 5% 10%;
+  }
+
+  .hero-para {
+    text-align: center;
+    margin-right: 0;
+  }
+
+  .herorightsideimg {
+    width: 100%;
+    margin-top: 23px;
+  }
+
+  .button1,
+  .button2 {
+    width: 50%; /* Set the width to 50% */
+    margin-left: auto; /* Center align the buttons */
+    margin-right: auto;
+    margin-bottom: 10px;
+  }
+
+  .main-links-navbar {
+    padding: 10px 0 10px 10px;
+  }
+
+  .button1,
+  .button2,
+  .button3 {
+    padding: 3% 10%;
+  }
+
+  .hero-para {
+    margin-top: 10px;
+  }
+
+  .herorightsideimg {
+    width: 70%;
+    margin-top: 23px; /* Added for mobile devices */
+  }
+
+  .heading-container {
+    align-items: center; /* Align headings to the center on mobile */
+  }
+
+  .heading {
+    text-align: center; /* Center align headings on mobile */
+  }
+
 }

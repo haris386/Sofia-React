@@ -1,148 +1,207 @@
-/* .leftimg {
-  width: 100%;
-} */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
 
-.left-side-column{
-  border-right: 1px solid gray;
+html,
+body {
+  height: 100%;
+  margin: 0;
 }
 
-
-.rightimg {
-  width: 45%;
+body {
+  font-family: "Montserrat", sans-serif;
 }
 
-.below-img-row{
-  margin-top: 10%;
+.logo img {
+  width: 115px; /* Set the width of the logo as needed */
+  height: auto; /* Maintain aspect ratio */
 }
 
-h5 {
-  text-align: left;
-  font-weight: bold;
+.main-navbar-2 {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: transparent;
 }
 
-.hello-heading {
-  text-align: center;
-  font-weight: bold;
+.box {
+  background-color: white;
+  padding: 5% 10%;
+  border-radius: 10px;
 }
 
-p {
-  text-align: left;
+.login-title {
+  font-family: monospace;
+  font-weight: 500 !important;
+  font-size: 20px;
+  margin-bottom: 5%;
 }
 
-.right-side-para {
-  text-align: center;
-}
-
-.login-email-heading {
-  text-align: left;
-}
-
-.login-email-inputfield {
-  margin-left: 4%;
-  border-radius: 5px;
-  border: 1px solid gray;
-  padding: 2%;
-}
-
-.password-heading {
-  text-align: left;
-}
-.login-password-inputfield {
-  margin-left: 4%;
-  border-radius: 5px;
-  border: 1px solid gray;
-  padding: 2%;
-}
-
-.forPword {
-  text-align: center;
-  color: blue;
-  margin-left: 15%;
-  margin-top: 5%;
+.sign-in-using-gt {
+  margin-bottom: 5%;
+  font-family: monospace;
+  font-size: 15px;
+  color: #7240c9;
   cursor: pointer;
 }
 
-.Log-login-btn {
-  width: 100%;
-  margin-left: 6%;
-  background: #355070;
-  border: none;
+.dhar {
+  color: #7240c9;
 }
 
-.Log-login-btn:hover {
-  background: #213246;
+.dhar:hover {
+  color: #512d8f;
+}
+
+.input-fields {
+  border: 1px solid #c1c1c1;
+  border-radius: 6px;
+  padding: 3%;
+  font-size: 15px;
+  margin-bottom: 5%;
+  position: relative;
+}
+
+.OR {
+  margin-bottom: 4%;
+  font-family: monospace;
+  color: gray;
+  text-align: center;
+}
+
+.OR::before,
+.OR::after {
+  content: "━━━━━━━━━━━";
+  display: inline-block;
+  width: 35%;
+  color: gray;
+}
+
+.OR::before {
+  margin-right: 1%;
+}
+
+.OR::after {
+  margin-left: 1%;
+}
+
+.forgot-password {
+  font-family: monospace;
+  font-size: 14px;
+  text-align: left;
+  margin-bottom: 5%;
+  color: #7240c9;
+  cursor: pointer;
+}
+
+.login-btn {
+  width: 98%;
+  margin: auto;
+  background-color: #7240c9;
+  font-family: monospace;
+  font-size: 20px;
+  margin-bottom: 10%;
+}
+
+.login-btn:hover {
+  background-color: #512d8f;
+}
+
+.dhaa {
+  margin-bottom: 2%;
+  font-family: monospace;
+}
+
+.OR {
+  margin-bottom: 4%;
+  font-family: monospace;
+  color: gray;
+}
+
+.login-footer {
+  /* padding: 30px 0; */
+  text-align: center;
+  margin-top: 1%;
+  color: white;
+}
+
+.login-footer h1 {
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.login-footer span {
+  display: block;
+  margin-top: 10px;
+  color: white;
+  font-weight: 300; /* Adjust the font weight as needed */
+}
+
+.login-footer ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.login-footer li {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.login-footer a {
+  text-decoration: none;
+  color: #333;
+  display: block;
 }
 
 span {
-  text-align: center;
-  margin-left: 3%;
+  margin-left: 0% !important;
 }
 
-Link {
-  color: #355070;
-}
-
-.Log-google-btn {
-  width: 100%;
-  margin-left: 10%;
-  background: white;
-  color: black;
-  border: 1px solid black;
-}
-
-.Log-google-btn:hover {
-  background: rgb(197, 194, 194);
-  color: black;
-  border: 1px solid black;
-}
-
-.twitter-btn {
-  width: 100%;
-  margin-left: 10%;
-  background: white;
-  color: black;
-  border: 1px solid black;
-}
-
-.twitter-btn:hover {
-  background: rgb(197, 194, 194);
-  color: black;
-  border: 1px solid black;
-}
-
-/* Media query for screens with a maximum width of 991px (tablet and smaller) */
-@media (max-width: 991px) {
-  .leftimg {
-    width: 100%; /* Set image width to 100% on tablet and smaller screens */
-  }
-}
-
-/* Media query for screens with a maximum width of 767px (mobile) */
-@media (max-width: 767px) {
-  .leftimg {
-    width: 100%; /* Set image width to 100% on mobile screens */
+@media only screen and (max-width: 767px) {
+  .login-title .sign-in-using-gt .input-fields .forgot-password {
+    margin-bottom: 2%;
   }
 
-  /* Center-align headings and paragraphs */
-  h5,
-  p,
-  .hello-heading,
-  .right-side-para {
+  .sign-in-using-gt .input-fields .forgot-password {
+    margin-bottom: 2%;
+  }
+
+  .input-fields .forgot-password {
+    margin-bottom: 2%;
+  }
+
+  .forgot-password {
+    margin-bottom: 2%;
+  }
+
+  .login-btn {
+    margin-bottom: 2%;
+  }
+
+  .login-footer h1 {
+    font-size: 20px;
+  }
+
+  .login-footer ul {
     text-align: center;
   }
 
-  /* Add margin to login and sign-in buttons from the right */
-  .Log-login-btn,
-  .Log-google-btn,
-  .twitter-btn {
-    margin-right: 5%; /* Adjust this value as needed */
+  .login-footer li {
+    margin-bottom: 5px;
   }
 
-  .left-side-column{
-    border: none;
+  /* .login-footer span {
+    margin-top: 20px;
+  } */
+
+  .login-footer a {
+    display: block;
   }
 
-  .login-email-heading{
-    margin-left: 0% !important;
+  .main-navbar-2 {
+    padding: 10px 0; /* Add padding for better spacing */
+  }
+
+  .login-footer {
+    margin-top: 0%; /* Added for mobile devices */
   }
 }

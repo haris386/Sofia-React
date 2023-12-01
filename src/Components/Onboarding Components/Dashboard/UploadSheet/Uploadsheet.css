@@ -1,0 +1,40 @@
+.dlup-box{
+    background-color: white;
+    margin-top: 5%;
+  }
+  
+  .circles-box{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 4% !important;
+  }
+  
+  .circle{
+    background-color: #7240c9;
+    border-radius: 25px;
+    padding: 3%;
+    width: 14%;
+    color: white;
+  }
+  
+  .download-pic{
+    width: 15%;
+  }
+  
+  .img-text{
+    margin-top: 10%;
+  }
+  
+  .download-sheet{
+  background-color: #7240c9;
+  border: none;
+  border-radius:10px;
+  padding: 5%;
+  margin-bottom: 5%;
+  
+  }
+
+  .download-pic {
+    margin-top: 10%;
+  }

@@ -1,0 +1,32 @@
+
+body{
+  background: none ;
+}
+
+.left-side-col{
+  background-color: #f6f6f6;
+  
+}
+
+.right-side-col{
+  background-color: #f6f6f6;
+  
+}
+
+.user-logo{
+  width: 5%;
+  border-radius: 25px;
+}
+
+.subtitle{
+  position: absolute;
+  top: 60%;
+  right: 10%;
+}
+
+.user-name{
+  text-transform: capitalize;
+  color: black;
+  font-weight: 500;
+  letter-spacing: 1.2px;
+}
