@@ -2,13 +2,11 @@ import React from "react";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Downloadsheet.css";
-import Container from "react-bootstrap/Container";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
+
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
 
 // IMAGE IMPORT
 import pic1 from "../img/pic1.png";
@@ -17,23 +15,14 @@ import pic1 from "../img/pic1.png";
 import { LuDownload } from "react-icons/lu";
 
 export const Downloadsheet = () => {
+  const googleDriveLink =
+  "https://drive.google.com/uc?export=download&id=1xNYKvMt6Mpxu_ldPIHB74ZszZ5uk7zed";
+
   return (
     <>
       <div className="dlup-box">
         <Row>
           <Col md={4}></Col>
-          {/* <Col md={4} className="circles-box">
-            <div className="circle">
-              <span>1</span>
-            </div>
-            <div className="circle">
-              <span>2</span>
-            </div>
-            <div className="circle">
-              <span>3</span>
-            </div>
-          </Col>
-          <Col md={4}></Col> */}
         </Row>
 
         <Row style={{ marginTop: "10%" }}>
@@ -52,9 +41,11 @@ export const Downloadsheet = () => {
         <Row style={{ marginTop: "10%" }}>
           <Col md={4}></Col>
           <Col md={4}>
-            <Button className="download-sheet">
-              <LuDownload /> Download Sheet
-            </Button>
+          <Link to={googleDriveLink} target="_blank" download>
+              <Button className="download-sheet">
+                <LuDownload /> Download Sheet
+              </Button>
+            </Link>
           </Col>
           <Col md={4}></Col>
         </Row>

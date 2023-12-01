@@ -25,56 +25,6 @@ import { PiTwitterLogo } from "react-icons/pi";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 
 export const Register = () => {
-  // const location = useLocation();
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
-
-  const navigate = useNavigate(); // Get the navigate function
-
-  const handleEmailChange = (e) => {
-    setEmail(e.target.value);
-  };
-
-  const handlePasswordChange = (e) => {
-    setPassword(e.target.value);
-  };
-
-  // GOOGLE AUTHENTICATION
-  const handleSignInWithGoogle = async () => {
-    try {
-      const result = await signInWithPopup(auth, googleAuthProvider);
-
-      // Check if the user already exists in Firestore
-      const userDocRef = doc(firestore, "users", result.user.uid);
-      const userDocSnapshot = await getDoc(userDocRef);
-
-      if (!userDocSnapshot.exists()) {
-        // Fetch additional user information, including the profile picture
-        const additionalUserInfo = await getAdditionalUserInfo(result);
-
-        // If the user doesn't exist, add them to the "users" collection
-        await setDoc(userDocRef, {
-          email: result.user.email,
-          name: result.user.displayName,
-          profilepic: additionalUserInfo.profile.picture || "",
-          // Add other user information as needed
-        });
-      }
-
-      localStorage.setItem("token", result.user.accessToken);
-      localStorage.setItem("user", JSON.stringify(result.user));
-      console.log("SUCCESSFULLY AUTHENTICATED WITH GOOGLE");
-
-      // Log the user information object to the console
-      console.log("User Information:", result.user);
-
-      // Redirect to the dashboard or another page
-      navigate("/dashboard");
-    } catch (error) {
-      console.log(error);
-    }
-  };
 
   return (
     <>
