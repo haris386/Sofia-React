@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 // FIREBASE IMPORTS
-import { auth, googleAuthProvider, firestore } from "../../Firebase/firebase";
+import { auth, googleAuthProvider, firestore } from "../../Firebase/Firebase";
 import { signInWithPopup, getAdditionalUserInfo } from "firebase/auth";
 import { doc, setDoc, getDoc } from "firebase/firestore";
 
