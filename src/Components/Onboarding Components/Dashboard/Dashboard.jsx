@@ -84,7 +84,7 @@ export const Dashboard = () => {
           </Col>
           <Col md={9} className="right-side-col">
             {/* NAVBAR */}
-            <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary">
+            <Navbar collapseOnSelect expand="lg">
               <Container>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">

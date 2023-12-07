@@ -16,6 +16,7 @@ import pic2 from '../img/pic2.png';
 
 export const Uploadsheet = () => {
   const [file, setFile] = useState(null);
+  const [uploadStatus, setUploadStatus] = useState(null);
 
   const handleFileChange = (e) => {
     if (e.target.files[0]) {
@@ -43,6 +44,9 @@ export const Uploadsheet = () => {
         const userDocRef = doc(firestore, "users", auth.currentUser.uid);
         await setDoc(userDocRef, { uploadedFileURL: downloadURL }, { merge: true });
 
+        // Set the upload status message
+        setUploadStatus("File uploaded successfully!");
+        
         // Reset the file state after successful upload
         setFile(null);
 
@@ -102,6 +106,7 @@ export const Uploadsheet = () => {
           <Button className="download-sheet" onClick={handleUpload}>
               <LuUpload /> Upload Sheet
             </Button>
+            {uploadStatus && <div>{uploadStatus}</div>}
           </Col>
           <Col md={4}></Col>
         </Row>
