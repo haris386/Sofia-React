@@ -7,9 +7,9 @@ import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import Button from "react-bootstrap/Button";
+// import Button from "react-bootstrap/Button";
 
-import giphy from "./img/giphy-unscreen.gif";
+// import giphy from "./img/giphy-unscreen.gif";
 import logo from "./img/rbglogo.png";
 
 // ICONS

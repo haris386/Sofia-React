@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 // FIREBASE IMPORTS
-import { auth, googleAuthProvider, firestore } from "../../Firebase/firebase";
+import { auth, googleAuthProvider, firestore } from "../../Firebase/Firebase";
 import { signInWithPopup, getAdditionalUserInfo } from "firebase/auth";
 import { doc, setDoc, getDoc } from "firebase/firestore";
 
@@ -25,7 +25,6 @@ import { PiTwitterLogo } from "react-icons/pi";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 
 export const Register = () => {
-
   return (
     <>
       {/* HEADER 2 */}
@@ -53,14 +52,10 @@ export const Register = () => {
                 </Row>
 
                 <Row>
-                  <Col md={6} className="sign-in-using-gt">
-                    <span onClick={handleSignInWithGoogle}>
-                      <RiGoogleLine size={20} /> Sign in Using Google
-                    </span>
-                  </Col>
-                  <Col md={6} className="sign-in-using-gt">
+                  <Col md={12} className="sign-in-using-gt">
+                    {/* <span onClick={handleSignInWithGoogle}> */}
                     <span>
-                      <PiTwitterLogo size={20} /> Sign in Using Twitter
+                      <RiGoogleLine size={20} /> Sign in Using Google
                     </span>
                   </Col>
                 </Row>
@@ -78,9 +73,33 @@ export const Register = () => {
                     type="text"
                     placeholder="Email"
                     className="input-fields"
-                    onChange={handleEmailChange}
-                    value={email}
+                    // onChange={handleEmailChange}
+                    // value={email}
                   />
+                  {/* <FaRegEnvelope className="email-icon" /> */}
+                </Row>
+
+                <Row>
+                  <Col md={6}>
+                    <input
+                      type="text"
+                      placeholder="First Name"
+                      className="input-fields"
+                      // onChange={handleEmailChange}
+                      // value={email}
+                    />
+                  </Col>
+
+                  <Col md={6}>
+                    <input
+                      type="text"
+                      placeholder="Last Name"
+                      className="input-fields"
+                      // onChange={handleEmailChange}
+                      // value={email}
+                    />
+                  </Col>
+
                   {/* <FaRegEnvelope className="email-icon" /> */}
                 </Row>
 
@@ -89,31 +108,55 @@ export const Register = () => {
                     type="text"
                     placeholder="Password"
                     className="input-fields"
-                    onChange={handlePasswordChange}
-                    value={password}
+                    // onChange={handlePasswordChange}
+                    // value={password}
                   />
                   {/* <IoLockClosedOutline className="password-icon" /> */}
                 </Row>
 
                 <Row>
-                  <Col md={4} className="forgot-password">
-                    <span>Forgot Password?</span>
-                  </Col>
-                  <Col md={4}></Col>
-                  <Col md={4}></Col>
+                  <input
+                    type="text"
+                    placeholder="Confirm Password"
+                    className="input-fields"
+                    // onChange={handlePasswordChange}
+                    // value={password}
+                  />
+                  {/* <IoLockClosedOutline className="password-icon" /> */}
                 </Row>
 
                 <Row>
-                  <Button className="btn btn-success login-btn">Login</Button>
+                  <Col md={4}>
+                    <input
+                      type="text"
+                      placeholder="+102"
+                      className="input-fields"
+                      // onChange={handlePasswordChange}
+                      // value={password}
+                    />
+                  </Col>
+                  <Col md={8}>
+                    <input
+                      type="text"
+                      placeholder="Phone Number"
+                      className="input-fields"
+                      // onChange={handlePasswordChange}
+                      // value={password}
+                    />
+                  </Col>
+                </Row>
+
+                <Row>
+                  <Button className="btn btn-success login-btn">Register</Button>
                 </Row>
 
                 <Row>
                   <Col md={2}></Col>
                   <Col md={8} className="dhaa">
                     <span>
-                      Don't have an account{" "}
-                      <Link to="/register" className="dhar">
-                        Register{" "}
+                      Already have an account{" "}
+                      <Link to="/login" className="dhar">
+                        Login{" "}
                       </Link>
                     </span>
                   </Col>

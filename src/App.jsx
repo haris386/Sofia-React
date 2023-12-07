@@ -8,6 +8,7 @@ import { Landingpage } from "./Components/Landing Page/Landingpage";
 // OnBoarding Screens Imports
 import { Login } from "./Components/Onboarding Components/Login/Login";
 import { Dashboard } from "./Components/Onboarding Components/Dashboard/Dashboard";
+import { Register } from "./Components/Onboarding Components/Register/Register";
 
 function App() {
   return (
@@ -27,8 +28,12 @@ function App() {
           {/* Route for Login */}
           <Route path="/login" element={<Login />} />
 
+          {/* Route for Register */}
+          <Route path="/register" element={<Register />} />
+
           {/* Dashboard */}
           <Route path="/dashboard" element={<Dashboard />} />
+          
 
         </Routes> 
       </Router>

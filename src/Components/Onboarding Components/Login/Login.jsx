@@ -103,14 +103,9 @@ export const Login = () => {
                 </Row>
 
                 <Row>
-                  <Col md={6} className="sign-in-using-gt">
+                  <Col md={12} className="sign-in-using-gt">
                     <span onClick={handleSignInWithGoogle}>
                       <RiGoogleLine size={20} /> Sign in Using Google
-                    </span>
-                  </Col>
-                  <Col md={6} className="sign-in-using-gt">
-                    <span>
-                      <PiTwitterLogo size={20} /> Sign in Using Twitter
                     </span>
                   </Col>
                 </Row>
