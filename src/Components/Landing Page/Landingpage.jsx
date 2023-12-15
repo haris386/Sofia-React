@@ -30,7 +30,7 @@ export const Landingpage = () => {
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
-              <ul className="ms-auto main-links-navbar">
+              <ul className="ms-auto main-links-navbar" style={{marginBottom: "0px"}}>
                 <Link to="/login" className="button1">
                   Login
                 </Link>
@@ -58,19 +58,13 @@ export const Landingpage = () => {
             </h2> */}
               <div className="heading-container">
                 <h2 className="heading">
-                  <span>Achieve with Sofia</span> Effortless Course Planning
-                  Success!
+                  <span>Build Your Ideal Curriculum, </span>Seamlessly.
                 </h2>
                 <h2 className="heading">
-                  <span>Streamline Unassigned</span> Courses with our dynamics
-                  Actions Boards!
+                  <span>Auto-Assign Finds the Perfect</span> Instructor Fit for Every Course.
                 </h2>
                 <h2 className="heading">
-                  <span>Embrace Versatility</span> with our Customizable
-                  Solutions!
-                </h2>
-                <h2 className="heading">
-                  <span>Next Heading 3</span> Your Content Here!
+                  <span>No More Course Chaos: Visualize &</span> Assign Instructors with a Single Click!
                 </h2>
               </div>
             </Col>

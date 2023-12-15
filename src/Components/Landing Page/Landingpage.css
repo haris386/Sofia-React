@@ -8,20 +8,15 @@ body {
 
 .main-landing-page-container {
   font-family: "Montserrat", sans-serif;
-  /* font-family: 'Engula Black', sans-serif; */
-  background-image: url("./img/bg.png"); /* Adjust the path based on your project structure */
+  background-image: url("./img/bg.png");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
+  height: 104vh;
 }
 
 .logo img {
-  width: 115px; /* Set the width of the logo as needed */
-  height: auto; /* Maintain aspect ratio */
-}
-
-ul {
-  margin-top: 2%;
+  width: 115px;
+  height: auto;
 }
 
 .main-links-navbar {
@@ -32,7 +27,7 @@ ul {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background-color: transparent; /* Add a background color if needed */
+  background-color: transparent;
 }
 
 .heading-container {
@@ -49,9 +44,10 @@ ul {
   font-weight: bold;
   margin-bottom: 20px;
   color: white;
-  opacity: 0; /* Hide all headings initially */
+  opacity: 0;
   position: absolute;
 }
+
 
 .heading:nth-child(1) {
   animation: fadeInOut 20s infinite; /* Adjust the duration as needed */
@@ -219,7 +215,7 @@ h2 {
 }
 
 
-/* LOGIN PAGE CSS STARTS HERE*/
+/* LOGIN PAGE CSS STARTS HERE
 .box {
   background-color: white;
   padding: 5% 10%;
@@ -264,7 +260,7 @@ h2 {
   text-align: center;
 }
 
-/* Add this CSS for lines above and below OR */
+Add this CSS for lines above and below OR
 .OR::before,
 .OR::after {
   content: "━━━━━━━━━━━";
@@ -309,7 +305,7 @@ h2 {
   font-family: monospace;
   color: gray;
 }
-/* LOGIN PAGE CSS ENDS HERE */
+LOGIN PAGE CSS ENDS HERE */
 
 
 
@@ -329,7 +325,7 @@ h2 {
   display: block;
   margin-top: 10px;
   color: white;
-  font-weight: 300; /* Adjust the font weight as needed */
+  font-weight: 300;
 }
 
 .footer ul {
@@ -365,7 +361,7 @@ span {
   }
   
   h2 {
-    font-size: 20px !important; /* Adjust the font size for better mobile appearance */
+    font-size: 20px !important;
     text-align: center;
     margin-top: 20px;
   }
@@ -459,6 +455,7 @@ span {
 
   .main-links-navbar {
     padding: 10px 0 10px 10px;
+    margin-bottom: 0px !important;
   }
 
   .button1,
